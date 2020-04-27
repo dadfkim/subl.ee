@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#" class="error">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</title>
+  
+
+  <link rel="icon" type="image/icon" sizes="16x16 32x32 48x48 128x128 256x256" href="/favicon.ico" />
+
+  <link rel="stylesheet" media="print" href="/print.css" />
+  <link rel="stylesheet" media="screen" href="/base.css" />
+  <link rel="stylesheet" media="screen" href="/theme:sublue.css" class="theme" />
+
+  <script>
+    
+
+var __theme__ = "sublue";
+var __themes__ = ["90s", "alabaster", "aws", "between", "blizzard", "clova", "coupang", "cwkim", "devsisters", "doodle", "facebook", "golang", "google", "heumtax", "ipari", "kakao", "legacy-v1", "legacy-v2", "lg", "mearie", "microsoft", "mit", "naver", "naver-labs", "nekoyume", "netflix", "netmarble", "nexon", "noom", "openai", "papago", "php", "planetarium", "pubg", "python", "pytorch", "ribbon", "ridi", "samsung", "sk", "slack", "spoqa", "sublue", "sublue:dark", "sundaytoz", "tada", "tencent", "terraform", "toss", "travis", "trello", "twitch", "twitter", "web2.0", "woowahan", "yanolja", "ycombinator", "yeonghoey"];
+
+// -----------------------------------------------------------------------------
+// Theme URL
+// -----------------------------------------------------------------------------
+
+function getThemeURL(theme) {
+  return '/theme:' + theme + '.css';
+}
+
+function parseThemeURL(url) {
+  return /theme:(.+)\.css$/.exec(url)[1];
+}
+
+function guessTheme() {
+  var regex = /[?&#]theme=([^&#]+)/;
+  var hash = location.hash;
+  var href = location.href;
+  var theme = (regex.exec(hash) || regex.exec(href) || [])[1];
+  if (theme) {
+    return theme;
+  }
+  var date = new Date();
+  var eventKey = (date.getMonth() + 1) + '/' + date.getDate();
+  var events = {"4/1": "90s", "4/16": "ribbon"};
+  theme = events[eventKey];
+  return theme || "sublue";
+}
+
+// -----------------------------------------------------------------------------
+// Favicon
+// -----------------------------------------------------------------------------
+
+function generateFavicon(shape, colors) {
+  var favicon = document.createElement('canvas');
+  favicon.width = 16;
+  favicon.height = 16;
+  var ctx = favicon.getContext('2d');
+
+  var shapeFlags = {'☰': [0,0,0], '☱': [1,0,0], '☲': [0,1,0],
+                    '☳': [1,1,0], '☴': [0,0,1], '☵': [1,0,1],
+                    '☶': [0,1,1], '☷': [1,1,1]}[shape];
+
+  for (var i = 0; i < 3; ++i) {
+    var split = shapeFlags[i] === 1;
+    var left = 1 + i * 5;
+
+    if (split) {
+      ctx.fillStyle = colors[i + 1] || colors[0];
+      ctx.fillRect(left, 1, 4, 7);
+
+      ctx.fillStyle = colors[i + 4] || colors[0];
+      ctx.fillRect(left, 9, 4, 6);
+    } else {
+      ctx.fillStyle = colors[i + 1] || colors[0];
+      ctx.fillRect(left, 1, 4, 14);
+    }
+  }
+
+  return favicon;
+}
+
+function updateFavicon() {
+  var emblem;
+  switch (__theme__) {
+  
+    case "noom":
+      emblem = {"colors": {"0": "#fd7451"}, "shape": "\u2632"}
+      break;
+  
+    case "ribbon":
+      emblem = {"colors": {"0": "#fc0"}, "shape": "\u2632"}
+      break;
+  
+    case "travis":
+      emblem = {"colors": {"0": "#3fa75f", "2": "#db423c", "3": "#d2c93b"}, "shape": "\u2632"}
+      break;
+  
+    case "heumtax":
+      emblem = {"colors": {"0": "#1f274b"}, "shape": "\u2632"}
+      break;
+  
+    case "ridi":
+      emblem = {"colors": {"0": "#1f8ce6"}, "shape": "\u2632"}
+      break;
+  
+    case "sk":
+      emblem = {"colors": {"0": "#ea002c", "4": "#f58206", "6": "#f58206"}, "shape": "\u2635"}
+      break;
+  
+    case "twitch":
+      emblem = {"colors": {"0": "#6441a4"}, "shape": "\u2632"}
+      break;
+  
+    case "microsoft":
+      emblem = {"colors": {"1": "#f25022", "2": "#7fba00", "3": "#ffb900", "5": "#00a4ef"}, "shape": "\u2632"}
+      break;
+  
+    case "golang":
+      emblem = {"colors": {"0": "#76e1fe"}, "shape": "\u2632"}
+      break;
+  
+    case "slack":
+      emblem = {"colors": {"1": "#36c5f0", "2": "#2eb67d", "3": "#e01e5a", "5": "#ecb22e"}, "shape": "\u2632"}
+      break;
+  
+    case "kakao":
+      emblem = {"colors": {"0": "#ffcd00"}, "shape": "\u2632"}
+      break;
+  
+    case "tencent":
+      emblem = {"colors": {"0": "#0052d9"}, "shape": "\u2632"}
+      break;
+  
+    case "google":
+      emblem = {"colors": {"1": "#4285f4", "2": "#ea4335", "3": "#34a853", "5": "#fbbc05"}, "shape": "\u2632"}
+      break;
+  
+    case "aws":
+      emblem = {"colors": {"0": "#f90"}, "shape": "\u2632"}
+      break;
+  
+    case "python":
+      emblem = {"colors": {"0": "#3776ab", "3": "#ffd343", "5": "#ffd343"}, "shape": "\u2632"}
+      break;
+  
+    case "twitter":
+      emblem = {"colors": {"0": "#1da1f2"}, "shape": "\u2632"}
+      break;
+  
+    case "doodle":
+      emblem = {"colors": {"0": "#f49", "5": "#ef3"}, "shape": "\u2632"}
+      break;
+  
+    case "devsisters":
+      emblem = {"colors": {"0": "#ff6000"}, "shape": "\u2632"}
+      break;
+  
+    case "sublue":
+      emblem = {"colors": {"0": "#e57", "5": "#fd8"}, "shape": "\u2632"}
+      break;
+  
+    case "sublue:dark":
+      emblem = {"colors": {"0": "#e57", "5": "#fd8"}, "shape": "\u2632"}
+      break;
+  
+    case "between":
+      emblem = {"colors": {"0": "#38dcd7"}, "shape": "\u2632"}
+      break;
+  
+    case "netmarble":
+      emblem = {"colors": {"0": "#ffde00", "3": "#5d3824", "4": "#fe605f", "6": "#5d3824"}, "shape": "\u2635"}
+      break;
+  
+    case "trello":
+      emblem = {"colors": {"0": "#0079bf"}, "shape": "\u2630"}
+      break;
+  
+    case "netflix":
+      emblem = {"colors": {"0": "#e50914"}, "shape": "\u2632"}
+      break;
+  
+    case "pubg":
+      emblem = {"colors": {"0": "#f2a900"}, "shape": "\u2632"}
+      break;
+  
+    case "terraform":
+      emblem = {"colors": {"0": "#5c4ee5"}, "shape": "\u2637"}
+      break;
+  
+    case "naver":
+      emblem = {"colors": {"0": "#00c73c"}, "shape": "\u2632"}
+      break;
+  
+    case "naver-labs":
+      emblem = {"colors": {"0": "#000"}, "shape": "\u2632"}
+      break;
+  
+    case "clova":
+      emblem = {"colors": {"0": "#05d686"}, "shape": "\u2632"}
+      break;
+  
+    case "papago":
+      emblem = {"colors": {"0": "#00a9ff", "3": "#26cd6b", "4": "#0085ff", "6": "#f8be00"}, "shape": "\u2635"}
+      break;
+  
+    case "pytorch":
+      emblem = {"colors": {"0": "#ee4c2c"}, "shape": "\u2634"}
+      break;
+  
+    case "toss":
+      emblem = {"colors": {"0": "#0050ff"}, "shape": "\u2632"}
+      break;
+  
+    case "woowahan":
+      emblem = {"colors": {"0": "#2ac1bc"}, "shape": "\u2632"}
+      break;
+  
+    case "legacy-v1":
+      emblem = {"colors": {"0": "#e34", "5": "#fc3"}, "shape": "\u2632"}
+      break;
+  
+    case "legacy-v2":
+      emblem = {"colors": {"0": "#e56", "5": "#fd6"}, "shape": "\u2632"}
+      break;
+  
+    case "alabaster":
+      emblem = {"colors": {"0": "#3e4349"}, "shape": "\u2632"}
+      break;
+  
+    case "nekoyume":
+      emblem = {"colors": {"0": "#5b6f90"}, "shape": "\u2632"}
+      break;
+  
+    case "planetarium":
+      emblem = {"colors": {"0": "#3e2a8c", "5": "#98f0c0"}, "shape": "\u2632"}
+      break;
+  
+    case "openai":
+      emblem = {"colors": {"1": "#ff157e", "2": "#ff4747", "3": "#ffa30e", "4": "#00e0ff", "5": "#328cff", "6": "#873cff"}, "shape": "\u2637"}
+      break;
+  
+    case "coupang":
+      emblem = {"colors": {"0": "#521110", "2": "#d73227", "3": "#e99923", "5": "#92ba3e", "6": "#50a3d9"}, "shape": "\u2636"}
+      break;
+  
+    case "facebook":
+      emblem = {"colors": {"0": "#0076fb"}, "shape": "\u2632"}
+      break;
+  
+    case "spoqa":
+      emblem = {"colors": {"0": "#4c80f1"}, "shape": "\u2632"}
+      break;
+  
+    case "php":
+      emblem = {"colors": {"0": "#777bb3"}, "shape": "\u2630"}
+      break;
+  
+    case "lg":
+      emblem = {"colors": {"0": "#a50034"}, "shape": "\u2632"}
+      break;
+  
+    case "blizzard":
+      emblem = {"colors": {"0": "#00adef"}, "shape": "\u2632"}
+      break;
+  
+    case "90s":
+      emblem = {"colors": {"0": "#e01", "5": "#ee1"}, "shape": "\u2632"}
+      break;
+  
+    case "web2.0":
+      emblem = {"colors": {"0": "#e57", "5": "#fc6"}, "shape": "\u2632"}
+      break;
+  
+    case "sundaytoz":
+      emblem = {"colors": {"0": "#ff003f"}, "shape": "\u2632"}
+      break;
+  
+    case "mit":
+      emblem = {"colors": {"0": "#000", "5": "#a31f34"}, "shape": "\u2636"}
+      break;
+  
+    case "nexon":
+      emblem = {"colors": {"0": "#0b2a4a", "3": "#c3d600", "4": "#00a1e1", "5": "#00a1e1"}, "shape": "\u2633"}
+      break;
+  
+    case "tada":
+      emblem = {"colors": {"0": "#2a2b4a"}, "shape": "\u2630"}
+      break;
+  
+    case "samsung":
+      emblem = {"colors": {"0": "#2c2e87"}, "shape": "\u2632"}
+      break;
+  
+    case "ycombinator":
+      emblem = {"colors": {"0": "#f26522"}, "shape": "\u2632"}
+      break;
+  
+    case "yanolja":
+      emblem = {"colors": {"0": "#ff3478"}, "shape": "\u2632"}
+      break;
+  
+    case "cwkim":
+      emblem = {"colors": {"0": "#e8acac", "2": "#eab45d", "4": "#ff6065", "5": "#00cef9", "6": "#45abc0"}, "shape": "\u2637"}
+      break;
+  
+    case "yeonghoey":
+      emblem = {"colors": {"0": "#212121"}, "shape": "\u2632"}
+      break;
+  
+    case "ipari":
+      emblem = {"colors": {"0": "#4bbfc3", "3": "#7baabe", "5": "#68b4c0"}, "shape": "\u2632"}
+      break;
+  
+    case "mearie":
+      emblem = {"colors": {"0": "#397b9c"}, "shape": "\u2630"}
+      break;
+  
+  }
+
+  var favicon = generateFavicon(emblem.shape, emblem.colors);
+
+  var faviconLink = document.querySelector('link[rel="icon"]');
+  faviconLink.href = favicon.toDataURL('image/icon');
+}
+
+// -----------------------------------------------------------------------------
+// Add ?theme= to internal links.
+// -----------------------------------------------------------------------------
+
+function keepThemeOnLinks() {
+  var $anchors = document.querySelectorAll('a[href]');
+
+  if ($anchors.length === 0) {
+    addEventListener('load', keepThemeOnLinks);
+  }
+
+  for (var i = 0; i < $anchors.length; ++i) {
+    var $a = $anchors[i];
+    var href = $a.getAttribute('href');
+
+    if (!/^\//.exec(href)) {
+      // Skip external links.
+      continue;
+    } else if (/^\/runker\/?/.exec(href)) {
+      // Skip SUBLEERUNKER.
+      continue;
+    }
+
+    // Remove existing theme in querystring and hash.
+    href = href.replace(/([?&#])theme=[^&]+/, '');
+    href = href.replace('&', '?');
+
+    // Keep querystring and hash.
+    var hash = /#.+/.exec(href) || '';
+    href = href.replace(/#.+/, '');
+
+    // Add the current theme into querystring.
+    if (/\?/.exec(href)) {
+      href += '&';
+    } else {
+      href += '?';
+    }
+    href += 'theme=' + __theme__;
+
+    // Restore hash.
+    href += hash;
+
+    $a.setAttribute('href', href);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Static Theme Loading
+// -----------------------------------------------------------------------------
+
+var selectThemeCalled = false;
+function selectTheme(theme) {
+  var isFirst = !selectThemeCalled;
+  selectThemeCalled = true;
+
+  if (theme === __theme__) {
+    return;
+  }
+
+  __theme__ = theme;
+  updateFavicon();
+  keepThemeOnLinks();
+
+  if (isFirst) {
+    // Load theme statically at the first time.
+    var themeLink = document.querySelector('.theme');
+    themeLink.setAttribute('href', getThemeURL(theme));
+    return;
+  }
+
+  loadThemeDynamically(theme);
+}
+
+function selectGuessedTheme() {
+  var theme = guessTheme();
+  selectTheme(theme);
+  return theme;
+}
+
+// Select the initial theme.
+selectGuessedTheme();
+
+// -----------------------------------------------------------------------------
+// Dynamic Theme Loading
+// -----------------------------------------------------------------------------
+
+window.addEventListener('hashchange', selectGuessedTheme);
+
+function onTransitionEnd(elem, property, targetValue, callback) {
+  var t = null;
+
+  function redundantCallback() {
+    var value = getComputedStyle(elem).getPropertyValue(property);
+    if (value !== targetValue) {
+      // Check again later.
+      return;
+    }
+
+    clearInterval(t);
+    elem.removeEventListener('transitionend', redundantCallback);
+
+    callback();
+  }
+  elem.addEventListener('transitionend', redundantCallback);
+
+  // The transitionend event may not triggered at the expected timing in some
+  // browsers. setInterval is used to fallback.
+  t = setInterval(redundantCallback, 100);
+}
+
+var lock = false;
+function loadThemeDynamically(theme) {
+  if (lock) {
+    return;
+  }
+  lock = true;
+
+  var $body = document.body;
+  var $footer = document.querySelector('footer');
+  var $link = document.querySelector('link.theme');
+
+  // 1. Start to hide contents.
+  $body.classList.add('loading');
+  onTransitionEnd($footer, 'opacity', '0', function() {
+    // 2. Load CSS when contents are hidden.
+    $loader = $link.cloneNode();
+    $loader.setAttribute('href', getThemeURL(theme));
+    document.head.appendChild($loader);
+
+    setTimeout(function onRendered() {
+      var $detect = document.createElement('div');
+      $detect.setAttribute('data-detect-theme', theme);
+      $detect.style.display = 'none';
+      document.body.appendChild($detect);
+
+      var style = getComputedStyle($detect, '::before')
+      var rendered = (style.content.replace(/^"|"$/g, '') === 'ready');
+      document.body.removeChild($detect);
+
+      if (!rendered) {
+        setTimeout(onRendered, 10);
+        return;
+      }
+
+      // 3. Swap with the previous CSS when rendered.
+      document.head.removeChild($link);
+
+      // 4. Start to show contents.
+      $body.classList.remove('loading');
+      onTransitionEnd($footer, 'opacity', '1', function() {
+        lock = false;
+
+        // 5. Try again if the loaded theme is not the selected one.
+        if (theme !== __theme__) {
+          loadThemeDynamically(__theme__);
+        }
+      });
+    }, 100);
+  });
+}
+
+// Traverse themes with 'j' and 'k'.
+window.addEventListener('keypress', function(e) {
+  var i = __themes__.indexOf(__theme__);
+  var theme = __theme__;
+
+  if (e.keyCode === 106) {         // 'j'
+    theme = __themes__[(__themes__.length + i + 1) % __themes__.length];
+  } else if (e.keyCode === 107) {  // 'k'
+    theme = __themes__[(__themes__.length + i - 1) % __themes__.length];
+  } else {
+    return;
+  }
+
+  if (/\?/.exec(location.href)) {
+    location.href = location.href.replace(/[\?#].+$/, '') + '#theme=' + theme;
+  } else {
+    location.hash = '#theme=' + theme;
+  }
+});
+  </script>
+
+  
+  <meta property="og:type" content="website" /><meta property="og:title" content="" /><meta property="og:url" content="https://subl.ee" /><meta property="og:image" content="https://subl.ee/qrcode.png" /><meta property="og:image:type" content="image/png" />
+
+  
+  <meta name="author" content="Heungsub Lee" /><meta name="contact" content="sub@subl.ee" /><meta name="copyright" content="&copy; 2012 Heungsub Lee" />
+
+  
+</head>
+<body style="transition: none !important">
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.body.style.transition = '';
+      }, 500);
+    });
+  </script>
+
+  
+    <header>
+      <div class="emblem-wrap">
+        <a class="emblem"
+          
+          href="/"
+          
+        >
+          <div class="emblem-left">
+            <i class="emblem-top"></i>
+            <i class="emblem-bottom"></i>
+          </div>
+          <div class="emblem-middle">
+            <i class="emblem-top"></i>
+            <i class="emblem-bottom"></i>
+          </div>
+          <div class="emblem-right">
+            <i class="emblem-top"></i>
+            <i class="emblem-bottom"></i>
+          </div>
+        </a>
+      </div>
+    </header>
+  
+
+  <main>
+    
+  
+    <h1>404 Not Found</h1>
+    <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+  
+
+  </main>
+
+  
+    <footer>
+      
+        <span class="copyright">
+          &copy; <span class="year">2012</span> Heungsub Lee
+        </span>
+        <script>
+          // auto-renew the year range of the copyright.
+          var yearSpan = document.querySelector('.year');
+          var since = Number(/^[0-9]+/.exec(yearSpan.innerText)[0]);
+          var until = Number(/[0-9]+$/.exec(yearSpan.innerText)[0]);
+          var thisYear = (new Date()).getFullYear();
+          until = Math.max(until, thisYear);
+          if (since < until) {
+            yearSpan.innerHTML = since + '&ndash;' + until;
+          } else {
+            yearSpan.innerHTML = until;
+          }
+        </script>
+      
+    </footer>
+  
+
+  <script>
+  </script>
+
+  
+    
+    
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1078484-1">
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', "UA-1078484-1");
+</script>
+
+
+  
+
+  
+    <script src="//wcs.naver.net/wcslog.js"></script>
+    <script>
+      var wcs_add = {wa: '1275da0d21793e8'};
+      wcs_do();
+    </script>
+  
+</body>
+</html>
