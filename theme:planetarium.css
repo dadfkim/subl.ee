@@ -426,7 +426,7 @@ dd.note {
   .themes li {
     width: 50%;
   }
-}h2 {
+}h1, h2 {
   letter-spacing: -0.0607em;
 }
         [data-detect-theme="planetarium"]::before {

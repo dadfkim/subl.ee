@@ -18,7 +18,7 @@
     
 
 var __theme__ = "sublue";
-var __themes__ = ["90s", "alabaster", "aws", "between", "blizzard", "clova", "coupang", "cwkim", "devsisters", "doodle", "facebook", "golang", "google", "heumtax", "ipari", "kakao", "legacy-v1", "legacy-v2", "lg", "mearie", "microsoft", "mit", "naver", "naver-labs", "nekoyume", "netflix", "netmarble", "nexon", "noom", "openai", "papago", "php", "planetarium", "pubg", "python", "pytorch", "ribbon", "ridi", "samsung", "sk", "slack", "spoqa", "sublue", "sublue:dark", "sundaytoz", "tada", "tencent", "terraform", "toss", "travis", "trello", "twitch", "twitter", "web2.0", "woowahan", "yanolja", "ycombinator", "yeonghoey"];
+var __themes__ = ["90s", "alabaster", "aws", "between", "blizzard", "clova", "coupang", "cwkim", "devsisters", "doodle", "facebook", "golang", "google", "heumtax", "ipari", "kakao", "legacy-v1", "legacy-v2", "lg", "microsoft", "mit", "naver", "naver-labs", "netflix", "netmarble", "nexon", "openai", "papago", "php", "planetarium", "pubg", "python", "pytorch", "ribbon", "ridi", "samsung", "sk", "slack", "spoqa", "sublue", "sublue:dark", "sundaytoz", "tada", "tencent", "terraform", "toss", "travis", "trello", "twitch", "twitter", "web2.0", "woowahan", "yanolja", "ycombinator", "yeonghoey"];
 
 // -----------------------------------------------------------------------------
 // Theme URL
@@ -84,10 +84,6 @@ function updateFavicon() {
   var emblem;
   switch (__theme__) {
   
-    case "noom":
-      emblem = {"colors": {"0": "#fd7451"}, "shape": "\u2632"}
-      break;
-  
     case "facebook":
       emblem = {"colors": {"0": "#0076fb"}, "shape": "\u2632"}
       break;
@@ -114,10 +110,6 @@ function updateFavicon() {
   
     case "ipari":
       emblem = {"colors": {"0": "#4bbfc3", "3": "#7baabe", "5": "#68b4c0"}, "shape": "\u2632"}
-      break;
-  
-    case "mearie":
-      emblem = {"colors": {"0": "#397b9c"}, "shape": "\u2630"}
       break;
   
     case "legacy-v1":
@@ -214,10 +206,6 @@ function updateFavicon() {
   
     case "blizzard":
       emblem = {"colors": {"0": "#00adef"}, "shape": "\u2632"}
-      break;
-  
-    case "nekoyume":
-      emblem = {"colors": {"0": "#5b6f90"}, "shape": "\u2632"}
       break;
   
     case "pytorch":
@@ -782,18 +770,6 @@ window.addEventListener('keypress', function(e) {
         <a href="#theme=lg" data-theme="lg">lg</a>
       </li>
     
-      <li id="mearie">
-        <img class="favicon" />
-        <script>
-          var favicon = generateFavicon("\u2630",
-                                        {"0": "#397b9c"});
-          document.getElementById("mearie")
-                  .querySelector('img.favicon')
-                  .setAttribute('src', favicon.toDataURL('image/icon'));
-        </script>
-        <a href="#theme=mearie" data-theme="mearie">mearie</a>
-      </li>
-    
       <li id="microsoft">
         <img class="favicon" />
         <script>
@@ -842,18 +818,6 @@ window.addEventListener('keypress', function(e) {
         <a href="#theme=naver-labs" data-theme="naver-labs">naver-labs</a>
       </li>
     
-      <li id="nekoyume">
-        <img class="favicon" />
-        <script>
-          var favicon = generateFavicon("\u2632",
-                                        {"0": "#5b6f90"});
-          document.getElementById("nekoyume")
-                  .querySelector('img.favicon')
-                  .setAttribute('src', favicon.toDataURL('image/icon'));
-        </script>
-        <a href="#theme=nekoyume" data-theme="nekoyume">nekoyume</a>
-      </li>
-    
       <li id="netflix">
         <img class="favicon" />
         <script>
@@ -888,18 +852,6 @@ window.addEventListener('keypress', function(e) {
                   .setAttribute('src', favicon.toDataURL('image/icon'));
         </script>
         <a href="#theme=nexon" data-theme="nexon">nexon</a>
-      </li>
-    
-      <li id="noom">
-        <img class="favicon" />
-        <script>
-          var favicon = generateFavicon("\u2632",
-                                        {"0": "#fd7451"});
-          document.getElementById("noom")
-                  .querySelector('img.favicon')
-                  .setAttribute('src', favicon.toDataURL('image/icon'));
-        </script>
-        <a href="#theme=noom" data-theme="noom">noom</a>
       </li>
     
       <li id="openai">
