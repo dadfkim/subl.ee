@@ -60,7 +60,7 @@
 body {
   font-family: 'Hind', sans-serif;
   font-weight: 400;
-  color: #333;
+  color: #1e1e1e;
 
   background-color: #fff;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ h2 {
 h1, h2 {
   
   font-weight: 400;
-  color: #00c73c;
+  color: #03c75a;
 }
 
 h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
@@ -265,10 +265,10 @@ dd.note {
 
 
   .emblem-left .emblem-top {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   .emblem-left .emblem-bottom {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   
     .emblem-left .emblem-top {
@@ -280,18 +280,18 @@ dd.note {
   
 
   .emblem-middle .emblem-top {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   .emblem-middle .emblem-bottom {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   
 
   .emblem-right .emblem-top {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   .emblem-right .emblem-bottom {
-    background-color: #00c73c;
+    background-color: #03c75a;
   }
   
     .emblem-right .emblem-top {
@@ -325,7 +325,7 @@ dd.note {
 .index h2 {
   margin-bottom: 0;
   font-size: 1.2em;
-  color: #00c73c;
+  color: #03c75a;
 }
 
 /* Resume */
