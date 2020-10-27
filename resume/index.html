@@ -561,7 +561,8 @@ window.addEventListener('keypress', function(e) {
 <dt class="label">AI Research</dt>
 <dd class="attr">PyTorch, Triton Inference Server, NVIDIA Nsight Systems, pipeline parallelism</dd>
 <dt class="label">Back-end Development</dt>
-<dd class="attr">Linux, <abbr title="Amazon Web Services">AWS</abbr>, Terraform, Docker, ZeroMQ, Redis, Couchbase, MySQL, etcd</dd>
+<dd class="attr">Linux, Docker, Kubernetes, <abbr title="Amazon Web Services">AWS</abbr>, Terraform, ZeroMQ, Redis, Couchbase, MySQL,
+  etcd</dd>
 </dl>
 <hr />
 <h2 id="work-experience">Work Experience</h2>
@@ -569,13 +570,15 @@ window.addEventListener('keypress', function(e) {
 <dt class="label">Software Engineer</dt>
 <dt><a href="https://navercorp.com/en">Naver</a>, 2020&ndash;</dt>
 <dd class="note">A technology company.</dd>
-<dd>Work for <a href="https://clova.ai/">Clova</a>. Just joined.</dd>
+<dd>Redesign the research platform to boost productivity in <a href="https://clova.ai/">Clova</a>.</dd>
 <dt class="label">Software Engineer</dt>
 <dt><a href="https://kakaobrain.com/">Kakao Brain</a>, 2018&ndash;2020</dt>
 <dd class="note">The AI research lab in Kakao.</dd>
 <dd>
-<p>Developed <a href="https://torchgpipe.readthedocs.io/">torchgpipe</a> which reproduces <a href="https://arxiv.org/abs/1811.06965">GPipe</a> in PyTorch to boost the
-training performance of large deep learning models.</p>
+<p>Focused on parallel training, including a large-scale data parallelism and
+pipeline parallelism.</p>
+<p>Reproduced <a href="https://arxiv.org/abs/1811.06965">GPipe</a> in PyTorch. This project was published as
+<a href="https://torchgpipe.readthedocs.io/">torchgpipe</a>.</p>
 <p>Developed a serverless training framework and a distributed hyperparameter
 search platform for AutoML.</p>
 </dd>
@@ -611,19 +614,18 @@ inspired by Python&rsquo;s doctest.</p>
 <dt><a href="https://torchgpipe.readthedocs.io/">torchgpipe</a>, 2019&ndash;2020</dt>
 <dd class="note">A GPipe implementation in PyTorch.</dd>
 <dd>
-<p>Implemented <a href="https://arxiv.org/abs/1811.06965">GPipe</a> in PyTorch. GPipe is a scalable pipeline parallelism
-library for the training of a giant model. The story behind this project
-can be found on <a href="https://kakaobrain.com/blog/66">Kakao Brain Blog<sup>ko</sup></a>.</p>
-<p>Optimized the pipeline parallelism and checkpointing for CUDA and PyTorch&rsquo;s
-autograd engine.</p>
+<p>Implemented <a href="https://arxiv.org/abs/1811.06965">GPipe</a> in PyTorch with optimization for CUDA, PyTorch&rsquo;s
+autograd engine, and long skip connections. GPipe is a scalable pipeline
+parallelism library for the training of a giant model.</p>
+<p>This project has become <a href="https://github.com/pytorch/pytorch/pull/44090">a part of PyTorch</a>. The story
+behind it can be found on <a href="https://kakaobrain.com/blog/66">Kakao Brain Blog<sup>ko</sup></a>
+and <a href="https://arxiv.org/abs/2004.09910">the technical report</a>.</p>
 </dd>
 <dt><a href="https://hangulize.org/">Hangulize</a>, 2010&ndash;</dt>
 <dd class="note">Automatically transcribes a non-Korean word into Hangul.</dd>
 <dd>
 <p>Implemented an automatic Hangul transcription algorithm to realize <a href="http://iceager.egloos.com/2610028">Brian
-Jongseong Park&rsquo;s idea</a>. By origin, it was written in
-Python, but rewritten in Go for better features, performance, and
-productivity.</p>
+Jongseong Park&rsquo;s idea</a>.</p>
 <p>Designed and implemented the web service and RESTful API. Many professional
 Korean translators habitually visit here to translate undocumented proper
 nouns. For example, Ryu Gwang, who is a technical translator, introduced
@@ -637,19 +639,15 @@ Xbox Live, in Python with a handy interface. This project was introduced in
 <a href="https://docs.google.com/presentation/d/1S5v9D31vpsr22efMSSCO6hmN2SQNCIqKG7JyGzUSzeI/edit?usp=sharing">PyData Berlin 2019</a>.</dd>
 <dt><a href="https://github.com/what-studio/profiling">Profiling</a>, 2014&ndash;2018</dt>
 <dd class="note">An interactive profiler for Python inspired by the Unity3D profiler.</dd>
-<dd>
-<p>Developed a Python profiler with an interactive <abbr title="Text-based user interface">TUI</abbr> inspired by <a href="https://docs.unity3d.com/Manual/ProfilerWindow.html">the Unity
-profiler</a>.</p>
-<p>On GitHub, this project has been starred by 3k people. Also, it was the 3rd
-daily trending repository on Sep 22, 2014.</p>
-</dd>
+<dd>Developed a Python profiler with an interactive <abbr title="Text-based user interface">TUI</abbr> inspired by <a href="https://docs.unity3d.com/Manual/ProfilerWindow.html">the Unity
+profiler</a>. On GitHub, this project has been starred by 3k
+people. Also, it was the 3rd daily trending repository on Sep 22, 2014.</dd>
 <dt>Others</dt>
 <dd>
 <ul>
 <li><a href="https://github.com/what-studio/tossi">Tossi</a> &ndash; A utility for Korean allomorphic particles.</li>
 <li><a href="http://pythonhosted.org/Flask-AutoIndex">Flask-AutoIndex</a> &ndash; mod_autoindex for <a href="https://flask.palletsprojects.com/">Flask</a>.</li>
-<li><a href="/runker/">SUBLEERUNKER</a> &ndash; A simple parody game of SUBERUNKER. Play it in your
-                      web browser.</li>
+<li><a href="/runker/">SUBLEERUNKER</a> &ndash; A simple parody game of SUBERUNKER.</li>
 <li><a href="https://github.com/sublee/me2virus">Me2virus</a> &ndash; An <abbr title="Cross-site scripting">XSS</abbr> attack on social media named <a href="https://en.wikipedia.org/wiki/Me2day">Me2day</a>. When a
                   user looks at an infected post, a new infected post was
                   written on the user&rsquo;s wall.</li>
